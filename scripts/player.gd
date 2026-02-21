@@ -1,11 +1,7 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
-const SPEED : int = 4200
 const JUMP_VELOCITY : int = -600
-var sprite : AnimatedSprite2D
-
-func _ready() -> void:
-	sprite = $AnimatedSprite2D
+@onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

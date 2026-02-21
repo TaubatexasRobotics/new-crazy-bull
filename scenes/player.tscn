@@ -1,6 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://8bfo36mkk16p"]
+[gd_scene format=3 uid="uid://8bfo36mkk16p"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_dniwh"]
+[ext_resource type="Script" uid="uid://dyhjb0mhxqeq2" path="res://scripts/player.gd" id="1_dniwh"]
 [ext_resource type="Texture2D" uid="uid://b7xx1um0nh7j" path="res://sprites/player/fall-1.png" id="2_tkbkc"]
 [ext_resource type="Texture2D" uid="uid://ckt18ak0bkj8k" path="res://sprites/player/idle-1.png" id="3_2wn6l"]
 [ext_resource type="Texture2D" uid="uid://lrpws21swbi1" path="res://sprites/player/idle-2.png" id="4_ueeqg"]
@@ -80,14 +80,15 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_is4s2"]
 size = Vector2(26, 18)
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" unique_id=1888595464]
+collision_mask = 2
 script = ExtResource("1_dniwh")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=613671934]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_jx070")
 animation = &"idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=474648957]
 position = Vector2(-2, 3)
 shape = SubResource("RectangleShape2D_is4s2")
