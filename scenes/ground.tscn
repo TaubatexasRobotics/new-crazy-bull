@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://d8a8a63wpe75" path="res://sprites/ground/ground.png" id="1_cco1s"]
 [ext_resource type="Script" uid="uid://bphwv5upmslji" path="res://scripts/scroll_body.gd" id="1_mi8v4"]
+[ext_resource type="Texture2D" uid="uid://cumahol0knyfx" path="res://sprites/ground/grass.png" id="3_w5yvf"]
+[ext_resource type="Texture2D" uid="uid://ctctj0kho4key" path="res://sprites/ground/cactus.png" id="4_1ywih"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ylxvm"]
 size = Vector2(1280, 337)
@@ -43,6 +45,48 @@ texture_filter = 1
 position = Vector2(640, 298)
 scale = Vector2(4, 4)
 texture = ExtResource("1_cco1s")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1562685494]
+texture_filter = 1
+position = Vector2(90.00001, -32.999992)
+scale = Vector2(3.7840905, 3.9232752)
+texture = ExtResource("3_w5yvf")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=245264875]
+texture_filter = 1
+position = Vector2(402, -32.999992)
+scale = Vector2(3.7840905, 3.9232752)
+texture = ExtResource("3_w5yvf")
+
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=1214242666]
+texture_filter = 1
+position = Vector2(769.99994, -32.999992)
+scale = Vector2(3.7840905, 3.9232752)
+texture = ExtResource("3_w5yvf")
+
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=1910644469]
+texture_filter = 1
+position = Vector2(1088, -32.999992)
+scale = Vector2(3.7840905, 3.9232752)
+texture = ExtResource("3_w5yvf")
+
+[node name="Sprite2D10" type="Sprite2D" parent="." unique_id=1339136486]
+texture_filter = 1
+position = Vector2(922.9999, -57.000004)
+scale = Vector2(3.7840905, 3.9232752)
+texture = ExtResource("4_1ywih")
+
+[node name="Sprite2D11" type="Sprite2D" parent="." unique_id=671366345]
+texture_filter = 1
+position = Vector2(608, -57.000004)
+scale = Vector2(3.7840905, 3.9232752)
+texture = ExtResource("4_1ywih")
+
+[node name="Sprite2D12" type="Sprite2D" parent="." unique_id=1521970948]
+texture_filter = 1
+position = Vector2(210.99994, -57.000004)
+scale = Vector2(3.7840905, 3.9232752)
+texture = ExtResource("4_1ywih")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=682158749]
 position = Vector2(640, 161.5)

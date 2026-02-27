@@ -7,8 +7,7 @@ class_name Level extends Node
 @onready var spawner : Marker2D = $Spawner
 @onready var static_bodies : Node = $StaticBodies
 @onready var delete_bodies : Area2D = $DeleteBodies
-var speed : float
-const MAX_SPEED : int = 25
+var speed : float = 0
 var current_ground : ScrollBody
 
 func _ready() -> void:
@@ -36,7 +35,7 @@ func spawn(element: PackedScene, reference: Node) -> ScrollBody:
 	return new_instance
 
 func _on_timer_timeout() -> void:
-	update_speed(10)
+	update_speed(1)
 
 func _on_delete_bodies_area_entered(area: Area2D) -> void:
 	area.get_parent().queue_free()

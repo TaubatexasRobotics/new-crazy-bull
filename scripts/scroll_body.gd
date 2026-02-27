@@ -1,5 +1,6 @@
 class_name ScrollBody extends StaticBody2D
 
+var max_speed: int  = 10
 @export var speed : int = 3
 
 func _physics_process(_delta: float) -> void:
@@ -9,4 +10,5 @@ func update_speed(new_speed: int) -> void:
 	speed = new_speed
 
 func increase_speed(amount: int) -> void:
-	speed += amount
+	if speed < max_speed:
+		speed += amount
