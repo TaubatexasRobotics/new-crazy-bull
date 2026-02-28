@@ -1,13 +1,13 @@
 class_name Player extends CharacterBody2D
 
-const JUMP_VELOCITY : int = -600
+const JUMP_VELOCITY : int = -1200
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 var jumping : bool = false
 
 func _physics_process(delta: float) -> void:	
 	if is_on_floor():
 		if Input.is_action_just_pressed("ui_accept"):
-			velocity.y = JUMP_VELOCITY
+			velocity.y = lerp(0, JUMP_VELOCITY, 0.5)
 		
 		sprite.play("run")
 	else:
