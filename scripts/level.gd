@@ -9,11 +9,13 @@ class_name Level extends Node
 @onready var delete_bodies : Area2D = $DeleteBodies
 var speed : float = 0
 var current_ground : ScrollBody
+var current_ground_index: int = 0
 
 func _ready() -> void:
 	var ground_reference: ScrollBody = static_bodies.get_children()[0]
 	current_ground = ground_reference
 	speed = current_ground.speed
+	current_ground_index = 0
 
 func update_speed(amount: int) -> void:
 	var bodies = static_bodies.get_children()
@@ -23,8 +25,12 @@ func update_speed(amount: int) -> void:
 
 func _process(_delta) -> void:
 	if current_ground.global_position.x < 0:
-		current_ground = spawn(static_objects[0], static_bodies)
+		var randindex: int = current_ground_index
+		while randindex == current_ground_index:
+			randindex = randi_range(0, len(static_objects) - 1)
+		current_ground = spawn(static_objects[randindex], static_bodies)
 		current_ground.speed = speed
+		current_ground_index = randindex
 
 func spawn(element: PackedScene, reference: Node) -> ScrollBody:
 	var new_instance: Node2D = element.instantiate()
