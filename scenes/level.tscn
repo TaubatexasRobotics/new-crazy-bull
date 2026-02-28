@@ -3,13 +3,18 @@
 [ext_resource type="Script" uid="uid://c8ohagx768hac" path="res://scripts/level.gd" id="1_rr44w"]
 [ext_resource type="PackedScene" uid="uid://dq8jt4ov5x0g5" path="res://scenes/ground.tscn" id="1_v6uew"]
 [ext_resource type="PackedScene" uid="uid://8bfo36mkk16p" path="res://scenes/player.tscn" id="2_sgo05"]
+[ext_resource type="PackedScene" uid="uid://dsmigh35oyfyd" path="res://scenes/ground2.tscn" id="3_mx8sn"]
+[ext_resource type="PackedScene" uid="uid://ctsvc6hvqbml3" path="res://scenes/ground3.tscn" id="4_ppgk2"]
+[ext_resource type="PackedScene" uid="uid://qcb6rpn24kka" path="res://scenes/ground4.tscn" id="5_2r41h"]
+[ext_resource type="PackedScene" uid="uid://cpaiyldjmusjt" path="res://scenes/ground5.tscn" id="6_b121j"]
+[ext_resource type="PackedScene" uid="uid://dpnlorbvyfbx7" path="res://scenes/ground6.tscn" id="7_8c41q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8frs"]
 size = Vector2(57, 965)
 
 [node name="level" type="Node" unique_id=1475529182]
 script = ExtResource("1_rr44w")
-static_objects = Array[PackedScene]([ExtResource("1_v6uew")])
+static_objects = Array[PackedScene]([ExtResource("1_v6uew"), ExtResource("3_mx8sn"), ExtResource("4_ppgk2"), ExtResource("5_2r41h"), ExtResource("6_b121j"), ExtResource("7_8c41q")])
 heights = Array[int]([20, 30, 10, 15, 50, 100])
 
 [node name="player" parent="." unique_id=385166153 groups=["player"] instance=ExtResource("2_sgo05")]

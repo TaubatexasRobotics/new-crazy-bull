@@ -47,42 +47,49 @@ scale = Vector2(4, 4)
 texture = ExtResource("1_cco1s")
 
 [node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1562685494]
+z_index = -1
 texture_filter = 1
 position = Vector2(90.00001, -32.999992)
 scale = Vector2(3.7840905, 3.9232752)
 texture = ExtResource("3_w5yvf")
 
 [node name="Sprite2D7" type="Sprite2D" parent="." unique_id=245264875]
+z_index = -1
 texture_filter = 1
 position = Vector2(402, -32.999992)
 scale = Vector2(3.7840905, 3.9232752)
 texture = ExtResource("3_w5yvf")
 
 [node name="Sprite2D8" type="Sprite2D" parent="." unique_id=1214242666]
+z_index = -1
 texture_filter = 1
 position = Vector2(769.99994, -32.999992)
 scale = Vector2(3.7840905, 3.9232752)
 texture = ExtResource("3_w5yvf")
 
 [node name="Sprite2D9" type="Sprite2D" parent="." unique_id=1910644469]
+z_index = -1
 texture_filter = 1
 position = Vector2(1088, -32.999992)
 scale = Vector2(3.7840905, 3.9232752)
 texture = ExtResource("3_w5yvf")
 
 [node name="Sprite2D10" type="Sprite2D" parent="." unique_id=1339136486]
+z_index = -1
 texture_filter = 1
 position = Vector2(922.9999, -57.000004)
 scale = Vector2(3.7840905, 3.9232752)
 texture = ExtResource("4_1ywih")
 
 [node name="Sprite2D11" type="Sprite2D" parent="." unique_id=671366345]
+z_index = -1
 texture_filter = 1
 position = Vector2(608, -57.000004)
 scale = Vector2(3.7840905, 3.9232752)
 texture = ExtResource("4_1ywih")
 
 [node name="Sprite2D12" type="Sprite2D" parent="." unique_id=1521970948]
+z_index = -1
 texture_filter = 1
 position = Vector2(210.99994, -57.000004)
 scale = Vector2(3.7840905, 3.9232752)
