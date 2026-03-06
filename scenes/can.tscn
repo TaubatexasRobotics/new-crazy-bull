@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bl00s8oepiy53"]
+
+[ext_resource type="Texture2D" uid="uid://cjnqymh2x7m2x" path="res://sprites/can.png" id="1_medpb"]
+[ext_resource type="Script" uid="uid://cua5ok4oftyqv" path="res://scripts/can.gd" id="1_py3wg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_medpb"]
+size = Vector2(14, 20)
+
+[sub_resource type="Animation" id="Animation_py3wg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_medpb"]
+resource_name = "idle"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -3), Vector2(0, 3), Vector2(0, -3)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_py3wg"]
+_data = {
+&"RESET": SubResource("Animation_py3wg"),
+&"idle": SubResource("Animation_medpb")
+}
+
+[node name="Can" type="Area2D" unique_id=1380883692]
+scale = Vector2(4, 4)
+collision_layer = 4
+script = ExtResource("1_py3wg")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1081430733]
+texture_filter = 1
+texture = ExtResource("1_medpb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=759377869]
+shape = SubResource("RectangleShape2D_medpb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1920666044]
+libraries/ = SubResource("AnimationLibrary_py3wg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

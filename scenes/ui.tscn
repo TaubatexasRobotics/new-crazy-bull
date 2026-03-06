@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://deaodffn5uas8"]
+
+[node name="Ui" type="CanvasLayer" unique_id=1794584737]
+
+[node name="CanCounter" type="Label" parent="." unique_id=334228094]
+offset_right = 40.0
+offset_bottom = 23.0
