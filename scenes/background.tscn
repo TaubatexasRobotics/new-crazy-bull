@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ckrm5blo5aup3"]
+
+[ext_resource type="Texture2D" uid="uid://cs4nlpt5t7exp" path="res://sprites/mountain.png" id="1_bkp1e"]
+[ext_resource type="Script" uid="uid://ckd1y3lxqsk5q" path="res://scripts/background.gd" id="1_y0upk"]
+[ext_resource type="Texture2D" uid="uid://c60cx5j3absgf" path="res://sprites/clouds_1.png" id="2_y0upk"]
+
+[node name="Background" type="Node2D" unique_id=1686364052 node_paths=PackedStringArray("background", "foreground")]
+script = ExtResource("1_y0upk")
+background = NodePath("Clouds1")
+foreground = NodePath("Mountain")
+
+[node name="Clouds1" type="Sprite2D" parent="." unique_id=1401233940]
+texture_filter = 1
+position = Vector2(1158, 220)
+scale = Vector2(4.033654, 4.0336537)
+texture = ExtResource("2_y0upk")
+
+[node name="Mountain" type="Sprite2D" parent="." unique_id=161278489]
+texture_filter = 1
+position = Vector2(1158.0001, 374)
+scale = Vector2(0.9059533, 0.8954249)
+texture = ExtResource("1_bkp1e")

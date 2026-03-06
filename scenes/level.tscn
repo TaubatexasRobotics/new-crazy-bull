@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://qcb6rpn24kka" path="res://scenes/ground4.tscn" id="5_2r41h"]
 [ext_resource type="PackedScene" uid="uid://cpaiyldjmusjt" path="res://scenes/ground5.tscn" id="6_b121j"]
 [ext_resource type="PackedScene" uid="uid://dpnlorbvyfbx7" path="res://scenes/ground6.tscn" id="7_8c41q"]
+[ext_resource type="PackedScene" uid="uid://ckrm5blo5aup3" path="res://scenes/background.tscn" id="9_8c41q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8frs"]
 size = Vector2(57, 965)
@@ -44,6 +45,9 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeleteBodies" unique_id=1680570365]
 position = Vector2(-1971, 236)
 shape = SubResource("RectangleShape2D_w8frs")
+
+[node name="Background" parent="." unique_id=1686364052 instance=ExtResource("9_8c41q")]
+z_index = -2
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="DeleteBodies" to="." method="_on_delete_bodies_area_entered"]
