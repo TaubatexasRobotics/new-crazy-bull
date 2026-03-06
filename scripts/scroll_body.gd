@@ -12,7 +12,6 @@ func _ready() -> void:
 		var instance = can.instantiate()
 		instance.position = markers[randindex].position
 		add_child(instance)
-		print(instance)
 
 func _physics_process(_delta: float) -> void:
 	position.x -= speed

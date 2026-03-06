@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://deaodffn5uas8"]
 
 [ext_resource type="FontFile" uid="uid://tguwnmyouw7x" path="res://assets/fonts/press_start_2p.ttf" id="1_nt7q6"]
-[ext_resource type="Script" uid="uid://iqxr6toatoa0" path="res://scenes/ui.gd" id="1_yev5y"]
+[ext_resource type="Script" uid="uid://iqxr6toatoa0" path="res://scripts/ui.gd" id="1_yev5y"]
 [ext_resource type="Texture2D" uid="uid://cjnqymh2x7m2x" path="res://sprites/can.png" id="2_x4jx1"]
 
 [sub_resource type="FontVariation" id="FontVariation_nt7q6"]
