@@ -2,8 +2,12 @@ class_name Player extends CharacterBody2D
 
 const JUMP_VELOCITY : int = -1200
 @onready var can_counter : int = 0
+@onready var distance : int = 0
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 var jumping : bool = false
+
+func _process(_delta: float) -> void:
+	distance += 1
 
 func _physics_process(delta: float) -> void:	
 	if is_on_floor():

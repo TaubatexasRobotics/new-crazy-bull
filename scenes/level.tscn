@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cpaiyldjmusjt" path="res://scenes/ground5.tscn" id="6_b121j"]
 [ext_resource type="PackedScene" uid="uid://dpnlorbvyfbx7" path="res://scenes/ground6.tscn" id="7_8c41q"]
 [ext_resource type="PackedScene" uid="uid://ckrm5blo5aup3" path="res://scenes/background.tscn" id="9_8c41q"]
+[ext_resource type="PackedScene" uid="uid://deaodffn5uas8" path="res://scenes/ui.tscn" id="9_olg7q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8frs"]
 size = Vector2(57, 965)
@@ -37,6 +38,9 @@ speed = 8
 [node name="Timer" type="Timer" parent="." unique_id=504563718]
 wait_time = 5.0
 autostart = true
+
+[node name="Ui" parent="." unique_id=1794584737 node_paths=PackedStringArray("player") instance=ExtResource("9_olg7q")]
+player = NodePath("../player")
 
 [node name="DeleteBodies" type="Area2D" parent="." unique_id=174509282]
 collision_layer = 4
