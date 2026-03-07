@@ -1,0 +1,54 @@
+{
+	"data": [
+		{
+		  "question": "A lata de refrigerante é feita de qual material?",
+		  "options": {
+			"A": "Alumínio",
+			"B": "Madeira",
+			"C": "Tecido",
+			"D": "Borracha"
+		  },
+		  "correct_answer": "A"
+		},
+		{
+		  "question": "Reciclar uma lata significa:",
+		  "options": {
+			"A": "Jogar no chão",
+			"B": "Usar o material novamente para fazer novos produtos",
+			"C": "Queimar a lata",
+			"D": "Guardar a lata para sempre"
+		  },
+		  "correct_answer": "B"
+		},
+		{
+		  "question": "Depois de beber um refrigerante em lata, o que é melhor fazer com a lata?",
+		  "options": {
+			"A": "Jogar na rua",
+			"B": "Jogar no lixo reciclável",
+			"C": "Enterrar no chão",
+			"D": "Jogar no rio"
+		  },
+		  "correct_answer": "B"
+		},
+		{
+		  "question": "Reciclar ajuda a:",
+		  "options": {
+			"A": "Cuidar do planeta",
+			"B": "Aumentar o lixo",
+			"C": "Sujar as cidades",
+			"D": "Poluir mais o ar"
+		  },
+		  "correct_answer": "A"
+		},
+		{
+		  "question": "O alumínio reciclado pode virar:",
+		  "options": {
+			"A": "Novas latas",
+			"B": "Pedras",
+			"C": "Água",
+			"D": "Areia"
+		  },
+		  "correct_answer": "A"
+		}
+	]
+}

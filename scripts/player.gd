@@ -4,21 +4,25 @@ const JUMP_VELOCITY : int = -1200
 @onready var can_counter : int = 0
 @onready var distance : int = 0
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
-var jumping : bool = false
+var jump : bool = false
 
 func _process(_delta: float) -> void:
 	distance += 1
 
+func _input(event: InputEvent) -> void:
+	if event is InputEventScreenTouch and event.pressed:
+		jump = true
+
 func _physics_process(delta: float) -> void:	
 	if is_on_floor():
-		if Input.is_action_just_pressed("ui_accept"):
+		if Input.is_action_just_pressed("ui_accept") or jump:
 			velocity.y = lerp(0, JUMP_VELOCITY, 0.5)
 		
 		sprite.play("run")
 	else:
 		if velocity.y < 0:
 			sprite.play("jump")
-			if Input.is_action_just_released("ui_accept"):
+			if Input.is_action_just_released("ui_accept") or jump:
 				velocity.y = 0
 		else:
 			sprite.play("fall")

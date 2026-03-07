@@ -7,10 +7,9 @@ func _ready() -> void:
 	animation.play("open")
 
 func fade_in(target: String) -> void:
-	animation.play("open")
+	animation.play_backwards("open")
 	await animation.animation_finished
 	get_tree().change_scene_to_file("res://scenes/" + target + ".tscn")
-	animation.play_backwards("open")
 
 func play_fade_in() -> void:
 	animation.play("open")
