@@ -42,3 +42,17 @@ texture = ExtResource("2_y1yra")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=962346156]
 position = Vector2(882, 51)
 shape = SubResource("RectangleShape2D_7gaio")
+
+[node name="ItemSpawners" type="Node2D" parent="." unique_id=1424776697]
+
+[node name="Marker2D" type="Marker2D" parent="ItemSpawners" unique_id=1831024189]
+position = Vector2(147, -129)
+
+[node name="Marker2D2" type="Marker2D" parent="ItemSpawners" unique_id=967611682]
+position = Vector2(423, -134)
+
+[node name="Marker2D3" type="Marker2D" parent="ItemSpawners" unique_id=416673715]
+position = Vector2(946, -98)
+
+[node name="Marker2D4" type="Marker2D" parent="ItemSpawners" unique_id=1666530897]
+position = Vector2(655, -295)

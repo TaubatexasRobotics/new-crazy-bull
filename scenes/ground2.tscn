@@ -142,3 +142,14 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1751406088]
 position = Vector2(35, 161)
 shape = SubResource("RectangleShape2D_mi8v4")
+
+[node name="ItemSpawners" type="Node2D" parent="." unique_id=1522921524]
+
+[node name="Marker2D" type="Marker2D" parent="ItemSpawners" unique_id=1320224054]
+position = Vector2(87, -106)
+
+[node name="Marker2D2" type="Marker2D" parent="ItemSpawners" unique_id=1115662177]
+position = Vector2(460, -193)
+
+[node name="Marker2D3" type="Marker2D" parent="ItemSpawners" unique_id=1587742334]
+position = Vector2(875, -57)

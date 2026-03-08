@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://ckppgbaenog33"]
+
+[ext_resource type="FontFile" uid="uid://tguwnmyouw7x" path="res://assets/fonts/press_start_2p.ttf" id="1_36y45"]
+[ext_resource type="Script" uid="uid://br08a2wprw4us" path="res://scripts/quiz.gd" id="1_jng0p"]
+
+[sub_resource type="FontVariation" id="FontVariation_jng0p"]
+base_font = ExtResource("1_36y45")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2fkxq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jng0p"]
+font_size = 41
+
+[node name="Quiz" type="CanvasLayer" unique_id=2021997312]
+script = ExtResource("1_jng0p")
+
+[node name="question_label" type="Label" parent="." unique_id=191964245]
+offset_left = 394.0
+offset_top = 24.0
+offset_right = 700.0
+offset_bottom = 58.0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_jng0p")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2fkxq")
+text = "Pergunta:"
+
+[node name="question_description" type="Label" parent="." unique_id=1888186599]
+offset_left = 39.0
+offset_top = 93.0
+offset_right = 1106.0
+offset_bottom = 310.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_36y45")
+theme_override_font_sizes/font_size = 53
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+label_settings = SubResource("LabelSettings_jng0p")
+autowrap_mode = 1

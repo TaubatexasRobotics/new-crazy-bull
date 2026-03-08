@@ -9,9 +9,14 @@
 [ext_resource type="PackedScene" uid="uid://cpaiyldjmusjt" path="res://scenes/ground5.tscn" id="6_b121j"]
 [ext_resource type="PackedScene" uid="uid://dpnlorbvyfbx7" path="res://scenes/ground6.tscn" id="7_8c41q"]
 [ext_resource type="PackedScene" uid="uid://ckrm5blo5aup3" path="res://scenes/background.tscn" id="9_8c41q"]
+[ext_resource type="PackedScene" uid="uid://deaodffn5uas8" path="res://scenes/ui.tscn" id="9_olg7q"]
+[ext_resource type="PackedScene" uid="uid://cwk3ibh2tsj8y" path="res://scenes/transition.tscn" id="11_t1rx8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w8frs"]
 size = Vector2(57, 965)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1rx8"]
+size = Vector2(1828, 83.5)
 
 [node name="level" type="Node" unique_id=1475529182]
 script = ExtResource("1_rr44w")
@@ -24,6 +29,7 @@ scale = Vector2(4, 4)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1014779468]
 position = Vector2(576, 324)
+zoom = Vector2(1.15, 1.15)
 
 [node name="Spawner" type="Marker2D" parent="." unique_id=1411939687]
 position = Vector2(1406, 547)
@@ -38,6 +44,9 @@ speed = 8
 wait_time = 5.0
 autostart = true
 
+[node name="Ui" parent="." unique_id=1794584737 node_paths=PackedStringArray("player") instance=ExtResource("9_olg7q")]
+player = NodePath("../player")
+
 [node name="DeleteBodies" type="Area2D" parent="." unique_id=174509282]
 collision_layer = 4
 collision_mask = 2
@@ -49,5 +58,15 @@ shape = SubResource("RectangleShape2D_w8frs")
 [node name="Background" parent="." unique_id=1686364052 instance=ExtResource("9_8c41q")]
 z_index = -2
 
+[node name="Transition" parent="." unique_id=1016674332 instance=ExtResource("11_t1rx8")]
+
+[node name="GameOver" type="Area2D" parent="." unique_id=1378953138]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameOver" unique_id=978371450]
+position = Vector2(626, 858.25)
+shape = SubResource("RectangleShape2D_t1rx8")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="DeleteBodies" to="." method="_on_delete_bodies_area_entered"]
+[connection signal="body_entered" from="GameOver" to="." method="_on_game_over_body_entered"]

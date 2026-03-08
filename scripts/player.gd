@@ -1,19 +1,38 @@
 class_name Player extends CharacterBody2D
 
 const JUMP_VELOCITY : int = -1200
+@onready var can_counter : int = 0
+@onready var distance : int = 0
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
-var jumping : bool = false
+var jump : bool = false
+var total_can : int = 0
 
-func _physics_process(delta: float) -> void:	
+func _process(_delta: float) -> void:
+	distance += 1
+
+func _input(event):
+	if event is InputEventScreenTouch:
+		if event.pressed:
+			jump = true
+		else:
+			jump = false
+
+func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		jump = true
+
+	if Input.is_action_just_released("ui_accept"):
+		jump = false
+		
 	if is_on_floor():
-		if Input.is_action_just_pressed("ui_accept"):
+		if jump:
 			velocity.y = lerp(0, JUMP_VELOCITY, 0.5)
 		
 		sprite.play("run")
 	else:
 		if velocity.y < 0:
 			sprite.play("jump")
-			if Input.is_action_just_released("ui_accept"):
+			if not jump:
 				velocity.y = 0
 		else:
 			sprite.play("fall")
@@ -21,3 +40,12 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	move_and_slide()
+
+func add_to_can_counter() -> void:
+	can_counter += 1
+
+func _ready() -> void:
+	total_can = randi_range(10, 20)
+
+func is_all_can_collected() -> bool:
+	return can_counter >= total_can

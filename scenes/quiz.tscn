@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://ckppgbaenog33"]
+
+[ext_resource type="FontFile" uid="uid://tguwnmyouw7x" path="res://assets/fonts/press_start_2p.ttf" id="1_36y45"]
+[ext_resource type="Script" uid="uid://br08a2wprw4us" path="res://scripts/quiz.gd" id="1_jng0p"]
+[ext_resource type="PackedScene" uid="uid://cwk3ibh2tsj8y" path="res://scenes/transition.tscn" id="3_2fkxq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jng0p"]
+font_size = 41
+
+[node name="Quiz" type="CanvasLayer" unique_id=2021997312]
+script = ExtResource("1_jng0p")
+
+[node name="question_description" type="Label" parent="." unique_id=2124026387]
+offset_left = 10.0
+offset_top = 117.0
+offset_right = 1326.0
+offset_bottom = 143.0
+theme_override_fonts/font = ExtResource("1_36y45")
+theme_override_font_sizes/font_size = 22
+text = "event is InputEventScreenTouch and event.pressed"
+horizontal_alignment = 1
+
+[node name="question" type="Label" parent="." unique_id=113191052]
+offset_left = 520.0
+offset_top = 27.0
+offset_right = 852.0
+offset_bottom = 68.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_36y45")
+theme_override_font_sizes/font_size = 53
+text = "Pergunta"
+label_settings = SubResource("LabelSettings_jng0p")
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="option_a" type="Button" parent="." unique_id=1882787954]
+offset_left = 64.0
+offset_top = 233.0
+offset_right = 1306.0
+offset_bottom = 311.0
+theme_override_fonts/font = ExtResource("1_36y45")
+theme_override_font_sizes/font_size = 29
+text = "A."
+
+[node name="option_b" type="Button" parent="." unique_id=953001501]
+offset_left = 65.0
+offset_top = 323.0
+offset_right = 1308.0
+offset_bottom = 401.0
+theme_override_fonts/font = ExtResource("1_36y45")
+theme_override_font_sizes/font_size = 29
+text = "B."
+
+[node name="option_c" type="Button" parent="." unique_id=1009183529]
+offset_left = 61.0
+offset_top = 416.0
+offset_right = 1303.0
+offset_bottom = 494.0
+theme_override_fonts/font = ExtResource("1_36y45")
+theme_override_font_sizes/font_size = 29
+text = "C."
+
+[node name="option_d" type="Button" parent="." unique_id=785522649]
+offset_left = 60.0
+offset_top = 518.0
+offset_right = 1303.0
+offset_bottom = 596.0
+theme_override_fonts/font = ExtResource("1_36y45")
+theme_override_font_sizes/font_size = 29
+text = "D."
+
+[node name="Transition" parent="." unique_id=1016674332 instance=ExtResource("3_2fkxq")]
+
+[connection signal="pressed" from="option_a" to="." method="_on_option_a_pressed"]
+[connection signal="pressed" from="option_b" to="." method="_on_option_b_pressed"]
+[connection signal="pressed" from="option_c" to="." method="_on_option_c_pressed"]
+[connection signal="pressed" from="option_d" to="." method="_on_option_d_pressed"]

@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://deaodffn5uas8"]
+
+[ext_resource type="FontFile" uid="uid://tguwnmyouw7x" path="res://assets/fonts/press_start_2p.ttf" id="1_nt7q6"]
+[ext_resource type="Script" uid="uid://iqxr6toatoa0" path="res://scripts/ui.gd" id="1_yev5y"]
+[ext_resource type="Texture2D" uid="uid://cjnqymh2x7m2x" path="res://sprites/can.png" id="2_x4jx1"]
+
+[sub_resource type="FontVariation" id="FontVariation_nt7q6"]
+base_font = ExtResource("1_nt7q6")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x4jx1"]
+
+[node name="UI" type="CanvasLayer" unique_id=1794584737]
+script = ExtResource("1_yev5y")
+
+[node name="CanCounter" type="Label" parent="." unique_id=334228094]
+offset_left = 64.0
+offset_top = 21.0
+offset_right = 232.0
+offset_bottom = 45.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_nt7q6")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x4jx1")
+text = "0"
+
+[node name="Distance" type="Label" parent="." unique_id=322109368]
+offset_left = 24.0
+offset_top = 76.0
+offset_right = 192.0
+offset_bottom = 100.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_nt7q6")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x4jx1")
+text = "Distância:"
+
+[node name="DistanceCounter" type="Label" parent="." unique_id=374771649]
+offset_left = 271.0
+offset_top = 76.0
+offset_right = 511.0
+offset_bottom = 100.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = SubResource("FontVariation_nt7q6")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x4jx1")
+text = "0
+"
+
+[node name="Can" type="Sprite2D" parent="." unique_id=1523617448]
+texture_filter = 1
+position = Vector2(36, 35.000004)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_x4jx1")

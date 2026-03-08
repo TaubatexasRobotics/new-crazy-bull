@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bjxy0ee33wew8"]
+
+[ext_resource type="Script" uid="uid://3sdylx7wpmq" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="FontFile" uid="uid://tguwnmyouw7x" path="res://assets/fonts/press_start_2p.ttf" id="2_wu84c"]
+[ext_resource type="PackedScene" uid="uid://cwk3ibh2tsj8y" path="res://scenes/transition.tscn" id="3_8ln24"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jng0p"]
+font_size = 41
+
+[node name="MainMenu" type="CanvasLayer" unique_id=2021997312]
+script = ExtResource("1_bqqt6")
+
+[node name="description" type="Label" parent="." unique_id=1888186599]
+offset_left = 90.0
+offset_top = 249.0
+offset_right = 1095.0
+offset_bottom = 334.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wu84c")
+theme_override_font_sizes/font_size = 46
+text = "Ajude o touro a pegar as latas"
+label_settings = SubResource("LabelSettings_jng0p")
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="title" type="Label" parent="." unique_id=113191052]
+offset_left = 324.0
+offset_top = 136.0
+offset_right = 868.0
+offset_bottom = 177.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_wu84c")
+theme_override_font_sizes/font_size = 53
+text = "Run Bull! Run"
+label_settings = SubResource("LabelSettings_jng0p")
+autowrap_mode = 1
+
+[node name="play" type="Button" parent="." unique_id=1056330885]
+offset_left = 505.0
+offset_top = 402.0
+offset_right = 681.0
+offset_bottom = 456.0
+theme_override_fonts/font = ExtResource("2_wu84c")
+theme_override_font_sizes/font_size = 29
+text = "Jogar"
+
+[node name="Transition" parent="." unique_id=1016674332 instance=ExtResource("3_8ln24")]
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
