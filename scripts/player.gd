@@ -5,6 +5,7 @@ const JUMP_VELOCITY : int = -1200
 @onready var distance : int = 0
 @onready var sprite : AnimatedSprite2D = $AnimatedSprite2D
 var jump : bool = false
+var total_can : int = 0
 
 func _process(_delta: float) -> void:
 	distance += 1
@@ -15,6 +16,7 @@ func _input(event: InputEvent) -> void:
 
 func _physics_process(delta: float) -> void:	
 	if is_on_floor():
+		jump = false
 		if Input.is_action_just_pressed("ui_accept") or jump:
 			velocity.y = lerp(0, JUMP_VELOCITY, 0.5)
 		
@@ -33,3 +35,9 @@ func _physics_process(delta: float) -> void:
 
 func add_to_can_counter() -> void:
 	can_counter += 1
+
+func _ready() -> void:
+	total_can = randi_range(10, 20)
+
+func is_all_can_collected() -> bool:
+	return can_counter >= total_can

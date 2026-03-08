@@ -11,11 +11,8 @@ class_name Level extends Node
 var speed : float = 0
 var current_ground : ScrollBody
 var current_ground_index: int = 0
-var total_can : int = 0
-
-func _ready() -> void:
-	total_can = randi_range(10, 20)
 	
+func _ready() -> void:	
 	var ground_reference: ScrollBody = static_bodies.get_children()[0]
 	current_ground = ground_reference
 	speed = current_ground.speed
@@ -35,6 +32,9 @@ func _process(_delta) -> void:
 		current_ground = spawn(static_objects[randindex], static_bodies)
 		current_ground.speed = speed
 		current_ground_index = randindex
+	
+	if player.is_all_can_collected():
+		transition.fade_in("quiz")
 
 func spawn(element: PackedScene, reference: Node) -> ScrollBody:
 	var new_instance: Node2D = element.instantiate()

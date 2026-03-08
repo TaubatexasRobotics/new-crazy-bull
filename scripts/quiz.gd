@@ -8,6 +8,7 @@ class_name Quiz extends CanvasLayer
 @onready var option_c : Button = $option_c
 @onready var option_d : Button = $option_d
 @onready var question_description : Label = $question_description
+@onready var transition : Transition = $Transition
 
 func load_dialogue_data():
 	var file = FileAccess.open(questions_file_path, FileAccess.READ)
@@ -34,3 +35,31 @@ func load_dialogue_data():
 
 func _ready() -> void:
 	load_dialogue_data()
+
+func _on_option_a_pressed() -> void:
+	var selected_option : String = "A"
+	if selected_option == option_a['data'][ref_question]['correct_answer']:
+		transition.fade_in("level")
+	else:
+		transition.fade_in("game_over")
+
+func _on_option_b_pressed() -> void:
+	var selected_option : String = "B"
+	if selected_option == option_a['data'][ref_question]['correct_answer']:
+		transition.fade_in("level")
+	else:
+		transition.fade_in("game_over")
+
+func _on_option_c_pressed() -> void:
+	var selected_option : String = "C"
+	if selected_option == option_a['data'][ref_question]['correct_answer']:
+		transition.fade_in("level")
+	else:
+		transition.fade_in("game_over")
+
+func _on_option_d_pressed() -> void:
+	var selected_option : String = "D"
+	if selected_option == option_a['data'][ref_question]['correct_answer']:
+		transition.fade_in("level")
+	else:
+		transition.fade_in("game_over")

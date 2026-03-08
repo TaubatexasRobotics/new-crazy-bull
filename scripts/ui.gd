@@ -5,7 +5,7 @@ class_name UI extends CanvasLayer
 @onready var distance_counter : Label = $DistanceCounter
 
 func update_data() -> void:
-	can_counter.text = str(player.can_counter)
+	can_counter.text = str(player.can_counter) + "/" + str(player.total_can)
 	distance_counter.text = str(player.distance)
 
 func _ready() -> void:
