@@ -38,28 +38,28 @@ func _ready() -> void:
 
 func _on_option_a_pressed() -> void:
 	var selected_option : String = "A"
-	if selected_option == option_a['data'][ref_question]['correct_answer']:
+	if selected_option == questions['data'][ref_question]['correct_answer']:
 		transition.fade_in("level")
 	else:
 		transition.fade_in("game_over")
 
 func _on_option_b_pressed() -> void:
 	var selected_option : String = "B"
-	if selected_option == option_a['data'][ref_question]['correct_answer']:
+	if selected_option == questions['data'][ref_question]['correct_answer']:
 		transition.fade_in("level")
 	else:
 		transition.fade_in("game_over")
 
 func _on_option_c_pressed() -> void:
 	var selected_option : String = "C"
-	if selected_option == option_a['data'][ref_question]['correct_answer']:
+	if selected_option == questions['data'][ref_question]['correct_answer']:
 		transition.fade_in("level")
 	else:
 		transition.fade_in("game_over")
 
 func _on_option_d_pressed() -> void:
 	var selected_option : String = "D"
-	if selected_option == option_a['data'][ref_question]['correct_answer']:
+	if selected_option == questions['data'][ref_question]['correct_answer']:
 		transition.fade_in("level")
 	else:
 		transition.fade_in("game_over")
