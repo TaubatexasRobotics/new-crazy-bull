@@ -10,21 +10,29 @@ var total_can : int = 0
 func _process(_delta: float) -> void:
 	distance += 1
 
-func _input(event: InputEvent) -> void:
-	if event is InputEventScreenTouch and event.pressed:
+func _input(event):
+	if event is InputEventScreenTouch:
+		if event.pressed:
+			jump = true
+		else:
+			jump = false
+
+func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
 		jump = true
 
-func _physics_process(delta: float) -> void:	
-	if is_on_floor():
+	if Input.is_action_just_released("ui_accept"):
 		jump = false
-		if Input.is_action_just_pressed("ui_accept") or jump:
+		
+	if is_on_floor():
+		if jump:
 			velocity.y = lerp(0, JUMP_VELOCITY, 0.5)
 		
 		sprite.play("run")
 	else:
 		if velocity.y < 0:
 			sprite.play("jump")
-			if Input.is_action_just_released("ui_accept") or jump:
+			if not jump:
 				velocity.y = 0
 		else:
 			sprite.play("fall")
