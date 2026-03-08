@@ -14,7 +14,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1179, 374)]
+"values": [Vector2(1373.0121, 542.90454)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -26,7 +26,31 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1179, 374)]
+"values": [Vector2(1366, 436)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("down:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1363.0121, 817.90454)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("up:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_f0i4t"]
@@ -41,7 +65,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1179, 374), Vector2(1189, 0)]
+"values": [Vector2(1377.5773, 460.73474), Vector2(1377.5773, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -53,7 +77,31 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1179, 374), Vector2(1176, 0)]
+"values": [Vector2(1368, 431), Vector2(1368, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("down:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1363.0121, 817.90454)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("up:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_px735"]
@@ -67,15 +115,15 @@ visible = false
 script = ExtResource("1_rerct")
 
 [node name="up" type="ColorRect" parent="." unique_id=681281166]
-offset_right = 1179.0
-offset_bottom = 374.0
+offset_right = 1366.0
+offset_bottom = 436.0
 color = Color(0, 0, 0, 1)
 
 [node name="down" type="ColorRect" parent="." unique_id=3611063]
-offset_left = 1169.0
-offset_top = 649.0
-offset_right = 2348.0
-offset_bottom = 1023.0
+offset_left = 1363.0121
+offset_top = 817.90454
+offset_right = 2736.0242
+offset_bottom = 1360.8091
 rotation = 3.1415927
 color = Color(0, 0, 0, 1)
 
